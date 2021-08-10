@@ -31,7 +31,7 @@ This SDK incorporates
 
 - A deployable example Dot Net Core application that is generic across topics and can process incoming https notifications
 - Allows registration of custom Message Processors.
-- [Verify the integrity](https://github.corp.ebay.com/bmeka/event-notification-dotnet-sdk/blob/master/Utils/SignatureValidatorImpl.cs#L28) of the incoming messages
+- [Verify the integrity](https://github.com/eBay/eBay-Notification-SDK-Dot-Net-Core/blob/main/Utils/SignatureValidatorImpl.cs#L44) of the incoming messages
   - Use key id from the decoded signature header to fetch public key required by the verification algorithm. An LRU cache is used to prevent refetches for same 'key'.
   - On verification success, delegate processing to the registered custom message processor and respond with a 204 HTTP status code.
   - On verification failure, respond back with a 412 HTTP status code
